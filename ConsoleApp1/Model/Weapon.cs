@@ -53,11 +53,22 @@ namespace ConsoleApp1.Model
 
         public void Shoot(int currentBullets)
         {
-
-            Console.WriteLine($"1 gulle atildi");
-            Console.WriteLine("Partt");
-            currentBullets = currentBullets - 1;
-            Console.WriteLine($"Daraqdaki gulle sayi:{currentBullets}");
+            bool isFire = false;
+            if (isFire==true)
+            {
+                Console.WriteLine($"1 gulle atildi");
+                Console.WriteLine("Partt");
+                currentBullets = currentBullets - 1;
+                Console.WriteLine($"Daraqdaki gulle sayi:{currentBullets}");
+            }
+            else
+            {
+                Console.WriteLine($"1 gulle atildi");
+                Console.WriteLine("Partt");
+                currentBullets = currentBullets - 1;
+                Console.WriteLine($"Daraqdaki gulle sayi:{currentBullets}");
+            }
+           
         }
 
         public  void Fire(double dischargeSeconds,double dischargeSeconds1)
