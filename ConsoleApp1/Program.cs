@@ -8,15 +8,15 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Darağın güllə tutumunu daxil edin:");
+            Console.WriteLine("Daraqın gulle tutumunu daxil edin:");
             int bulletCapacity=Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Darağdaki güllə sayini daxil edin:");
+            Console.WriteLine("Daraqdaki gülle sayini daxil edin:");
             int currentBullets=Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Darağın boşalma saniyəsini daxil edin:");
+            Console.WriteLine("Daraqın bosalma saniyesini daxil edin:");
             double dischargeSeconds=Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Atəş modunu seçin:");
+            Console.WriteLine("Ates modunu secin:");
             string firingModeSingle = Console.ReadLine();
-            Console.WriteLine("Atəş modunu seçin:");
+            Console.WriteLine("Ates modunu secin:");
             string firingModeAuto = Console.ReadLine();
             
 
@@ -36,6 +36,7 @@ namespace ConsoleApp1
                     case 1:
                         Console.WriteLine("1ci metod");
                         bullet.Shoot(currentBullets);
+
                         Console.WriteLine("----------------------------------");
                         break;
                     case 2:
@@ -55,7 +56,7 @@ namespace ConsoleApp1
                         break;
                     case 5:
                         Console.WriteLine("5ci  metod");
-                        bullet.ChangeFireMode();
+                        bullet.ChangeFireMode("Avtomatik","Tekli");
                         Console.WriteLine("----------------------------------");
                         break;
                     case 6:

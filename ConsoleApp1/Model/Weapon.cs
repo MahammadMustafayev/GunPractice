@@ -44,10 +44,10 @@ namespace ConsoleApp1.Model
 
         public void GetInfo()
         {
-            Console.WriteLine($"Darağın güllə tutumu:{bulletCapacity}");
-            Console.WriteLine($"Daraqdakı güllə sayı:{currentBullets}");
-            Console.WriteLine($"Darağın boşalma saniyəsi:{dischargeSeconds}");
-            Console.WriteLine($"Atış modları: {firingModeSingle} {firingModeAuto}");
+            Console.WriteLine($"Daraqin gulle tutumu:{bulletCapacity}");
+            Console.WriteLine($"Daraqdakı gulle sayi:{currentBullets}");
+            Console.WriteLine($"Daraqın bosalma saniyesi:{dischargeSeconds}");
+            Console.WriteLine($"Ates modlari: {firingModeSingle} {firingModeAuto}");
         }
 
 
@@ -55,6 +55,7 @@ namespace ConsoleApp1.Model
         {
 
             Console.WriteLine($"1 gulle atildi");
+            Console.WriteLine("Partt");
             currentBullets = currentBullets - 1;
             Console.WriteLine($"Daraqdaki gulle sayi:{currentBullets}");
         }
@@ -65,6 +66,7 @@ namespace ConsoleApp1.Model
             {
                 if (dischargeSeconds>=dischargeSeconds1)
                 {
+                    Console.WriteLine("Dirrrr dirrrrr");
                     currentBullets = currentBullets - currentBullets;
                     Console.WriteLine($"Silahdaki bütün güllələr {dischargeSeconds} saniyədə boşaldı.Qalan gulle sayi:{currentBullets}");
                 }
@@ -131,15 +133,14 @@ namespace ConsoleApp1.Model
             return currentBullets;
         }
 
-        public void ChangeFireMode()
+        public string ChangeFireMode(string firingModeSingle, string firingModeAuto)
         {
-            string firingModeSingle = "Tekli";
-            string firingModeAuto = "Avtomatik";
+            
             Console.WriteLine($"Atəş modu:{firingModeSingle}");
             string firingMode = firingModeSingle.Replace(firingModeSingle,firingModeAuto);
             Console.WriteLine("Atəş modu dəyisdi");
             Console.WriteLine($"Atəş modu:{firingMode}");
-
+            return firingMode;
         }
 
         
