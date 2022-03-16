@@ -6,15 +6,46 @@ namespace ConsoleApp1.Model
 {
     class Weapon
     {
-        int bulletCapacity;
-        int currentBullets;
-        double dischargeSeconds;
-        string firingModeSingle;
-        string firingModeAuto;
+        
+        private int bulletCapacity 
+        {
+            get 
+            {
+                if (bulletCapacity > 0 && bulletCapacity < 100)
+                {
+                    Console.WriteLine("Lazimi gulle var");
+                }
+                else if (bulletCapacity < 0)
+                {
+                    Console.WriteLine("Gulle yoxdur");
+                }
+                return 0;
+            }
+            set 
+            {
+                if (bulletCapacity>0 && bulletCapacity<100)
+                {
+                    value = bulletCapacity;
+                }
+                else if (bulletCapacity<0)
+                {
+                    value = 0;
+                }
+            } 
+        }   
+        private int currentBullets { get; set; }
+        private double dischargeSeconds { get; set; }
+        private string firingModeSingle { get; set; }
+        private string firingModeAuto { get; set; }
 
         public Weapon()
         {
 
+        }
+
+        public void Edit()
+        {
+            
         }
 
         public Weapon(int bulletCapacity)
@@ -58,8 +89,7 @@ namespace ConsoleApp1.Model
             {
                 Console.WriteLine($"1 gulle atildi");
                 Console.WriteLine("Partt");
-                currentBullets = currentBullets - 1;
-                Console.WriteLine($"Daraqdaki gulle sayi:{currentBullets}");
+               
             }
             else
             {
