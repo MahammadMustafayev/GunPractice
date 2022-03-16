@@ -7,7 +7,7 @@ namespace ConsoleApp1.Model
     class Weapon
     {
         
-        private int bulletCapacity 
+        public int bulletCapacity 
         {
             get 
             {
@@ -33,10 +33,10 @@ namespace ConsoleApp1.Model
                 }
             } 
         }   
-        private int currentBullets { get; set; }
-        private double dischargeSeconds { get; set; }
-        private string firingModeSingle { get; set; }
-        private string firingModeAuto { get; set; }
+        public int currentBullets { get; set; }
+        public double dischargeSeconds { get; set; }
+        public string firingModeSingle { get; set; }
+        public string firingModeAuto { get; set; }
 
         public Weapon()
         {
