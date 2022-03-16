@@ -27,6 +27,7 @@ namespace ConsoleApp1
 
 
             int key = 0;
+            string value = "";
             do
             {
                 Console.WriteLine("Reqem daxil edin : ");
@@ -67,13 +68,38 @@ namespace ConsoleApp1
                         bullet.GetInfo();
                         Console.WriteLine("----------------------------------");
                         break;
+                        
                     default:
                         Console.WriteLine("Səhv Daxil Etdiniz");
                         break;
                 }
             } while (key != 6);
 
-          
+            do
+            {
+                Console.WriteLine("Reqem daxil edin : ");
+                key = Convert.ToInt32(Console.ReadLine());
+                value = Console.ReadLine();
+                switch (key)
+                {
+                    case 7:
+                        Console.WriteLine("Redakte et");
+                        break;
+                    case 'T':
+                        Console.WriteLine("Tutumu deyisir");
+                        break;
+                    case 'S':
+                        Console.WriteLine("Gulle Sayi");
+                        break;
+                    case 'D':
+                        Console.WriteLine("Sifirlama saniyesi");
+                        break;
+                    default:
+                        break;
+                }
+            }
+                while (true) ;
+                
 
         }
     }
